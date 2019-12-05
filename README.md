@@ -1,37 +1,19 @@
-#### 目的
-减少yapi 录入时间，通过工具反向规范代码注释，和代码整洁
+### 说明
+基于YapiIdeaUploadPlugin 插件基础上，进行二次开发扩展，支持swagger 注解
 
-#### 下载地址
-1:<a href="https://github.com/diwand/YapiIdeaUploadPlugin/tree/master/disk" >github</a><br>
-2:idea 插件库 <br>
-更新速度 github>idea 插件库
+支持右键项目一键同步Controller文件接口
 
-#### 支持语言
-java,spring
-
-#### 单个&批量
-
-单个上传选中方法名称 <br>
-批量上传选中类名 <br>
-
-#### 支持接口
-目前 dubbo 接口/api
-
-#### 支持yapi 的版本
-1.5.0+
-
-#### 支持idea 版本
-2017+
+支持dto mock配置，@ApiModelProperty(example="@mock")
 
 
-#### 使用方式
-
-查看 <a href="https://github.com/diwand/YapiIdeaUploadPlugin/wiki/%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8">wiki</a> 
-
-
-#### 感谢
-感谢以下同学提交的代码(排名不分先后）
- - @sun7132568 
- - @zouzou6321
- - @zhanyao
- - @Planeswalker23
+### 使用方式：
+.idea/misc.xml 文件中 添加以下配置
+````
+<!--yapi配置-->
+<component name="yapi">
+  <option name="projectToken">yapi项目token</option>
+  <option name="projectId">项目id</option>
+  <option name="yapiUrl">http://yapi.xxxx.com</option>
+  <option name="projectType">api</option>
+</component>
+````
